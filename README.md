@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website application is an online course registration system.
 
-Things you may want to cover:
+Homepage of this website is a Login page. Since there's no user in the database yet, 
+you should create your own account by clicking the "Sign up now" button.
 
-* Ruby version
+Upon signing up, you will be directed into your account directly. What you are seeing is
+all the courses that you are enrolled to. At this stage, there should be no classes there
+since you have registered for zero classes.
 
-* System dependencies
+On the up-right you will see a "Search" button. Clicking that will re-direct you to a search page
+where you can search courses based on course name and subjects. The drop-box for subjects is optional,
+you will still be able to search courses without selecting any courses from the dropbox. Clicking
+the "Search" button will yield the searching results.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+There is an "enroll" button behind each course, which allow you to register for it. By clicking
+that button, the corresponding course will be added to your account, and you will immediately see
+it listed on the home page of your account.

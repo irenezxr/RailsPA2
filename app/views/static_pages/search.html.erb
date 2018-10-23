@@ -11,14 +11,13 @@
 </div>
 
 <h1>Searching results</h1>
-<div>
-  <%= link_to 'Home', user_courses_path %>
-</div>
 
 <div>
 <%= form_tag("/searchresults", method: "get") do %>
   <%= label_tag("Search for:") %>
+  <%= "Course name:" %>
   <%= text_field_tag(:q) %>
+  <%= "Subject:" %>
   <%= collection_select(:subject, :id, Subject.all, :id, :name, prompt: true) %>
   <%= submit_tag("Search") %>
 <% end %>
