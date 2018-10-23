@@ -1,0 +1,29 @@
+<% provide(:title, "Search") %>
+
+<div class="container">
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Log out", logout_path, method: :delete %></li>
+        <li><%= link_to 'Search', search_path %></li>
+        <li><%= link_to 'Home', user_courses_path %></li>
+      </ul>
+    </nav>
+</div>
+
+<h1>Searching results</h1>
+<div>
+  <%= link_to 'Home', user_courses_path %>
+</div>
+
+<div>
+<%= form_tag("/searchresults", method: "get") do %>
+  <%= label_tag("Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= collection_select(:subject, :id, Subject.all, :id, :name, prompt: true) %>
+  <%= submit_tag("Search") %>
+<% end %>
+</div>
+
+
+
+
